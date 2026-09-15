@@ -19,90 +19,132 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="page-header">
-        <div class="brand-block">
-          <div class="brand-mark">GR</div>
-          <div>
-            <p class="eyebrow">GeekRoom</p>
-            <h1>Million Dollar Idea</h1>
-          </div>
+      <div class="browser-topbar">
+        <div class="browser-nav">
+          <button class="nav-arrow" aria-label="Back">←</button>
+          <button class="nav-arrow" aria-label="Forward">→</button>
         </div>
-
-        <div class="header-controls">
-          <label class="team-label" for="teamNameInput">Team name</label>
-          <input
-            id="teamNameInput"
-            type="text"
-            maxlength="30"
-            placeholder="e.g. Team Nova"
-            value="Team Nova"
-          />
-          <button id="spinAllBtn" class="primary-btn">Spin All</button>
-          <button id="downloadPdfBtn" class="secondary-btn">Download PDF</button>
+        <div class="browser-address">
+          <span class="address-lock">https</span>
+          <span>://millidollandgeekroom.vercel.app</span>
         </div>
-      </header>
+        <div class="browser-tools">
+          <span>☆</span>
+          <span>⌂</span>
+          <span>◉</span>
+        </div>
+      </div>
 
-      <main class="randomiser-grid">
-        <section class="slot" data-slot="world">
-          <div class="slot-header">
-            <span class="slot-label">THE WORLD</span>
-          </div>
+      <div class="app-window">
+        <aside class="side-rail" aria-label="Sidebar">
+          <div class="rail-brand">GR</div>
+          <div class="rail-item active">●</div>
+          <div class="rail-item">◉</div>
+          <div class="rail-item">◌</div>
+          <div class="rail-item">✦</div>
+          <div class="rail-item">◇</div>
+          <div class="rail-item">◎</div>
+          <div class="rail-item">◍</div>
+          <div class="rail-item">✦</div>
+          <div class="rail-item">↺</div>
+        </aside>
 
-          <div class="wheel-outer">
-            <div class="wheel" data-wheel="world">
-              <div class="pointer" aria-hidden="true"></div>
-              <div class="wheel-center">
-                <span id="result-world">Healthcare</span>
+        <main class="workspace">
+          <header class="page-header">
+            <div class="brand-block">
+              <div class="brand-mark">GR</div>
+              <div>
+                <p class="eyebrow">GeekRoom</p>
               </div>
             </div>
-          </div>
+          </header>
 
-          <button class="spin-btn" data-spin="world">Spin Combo</button>
-        </section>
-
-        <section class="slot" data-slot="twist">
-          <div class="slot-header">
-            <span class="slot-label">THE TWIST</span>
-          </div>
-
-          <div class="wheel-outer">
-            <div class="wheel" data-wheel="twist">
-              <div class="pointer" aria-hidden="true"></div>
-              <div class="wheel-center">
-                <span id="result-twist">AI</span>
-              </div>
+          <div class="content-area">
+            <div class="brand-title">
+              <div class="brand-mark large">GR</div>
+              <h1>Million Dollar Idea</h1>
             </div>
-          </div>
 
-          <button class="spin-btn" data-spin="twist">Spin Combo</button>
-        </section>
-
-        <section class="slot" data-slot="people">
-          <div class="slot-header">
-            <span class="slot-label">THE PEOPLE</span>
-          </div>
-
-          <div class="wheel-outer">
-            <div class="wheel" data-wheel="people">
-              <div class="pointer" aria-hidden="true"></div>
-              <div class="wheel-center">
-                <span id="result-people">Students</span>
-              </div>
+            <div class="controls-row">
+              <label class="team-label" for="teamNameInput">Team name</label>
+              <input
+                id="teamNameInput"
+                type="text"
+                maxlength="30"
+                placeholder="e.g. Team Nova"
+                value="Team Nova"
+              />
+              <button id="spinAllBtn" class="primary-btn">Spin All</button>
+              <button id="downloadPdfBtn" class="secondary-btn">Download PDF</button>
             </div>
+
+            <main class="randomiser-grid">
+              <section class="slot" data-slot="world">
+                <div class="slot-header">
+                  <span class="slot-label">THE WORLD</span>
+                </div>
+
+                <div class="wheel-outer">
+                  <div class="wheel" data-wheel="world">
+                    <div class="pointer" aria-hidden="true"></div>
+                    <div class="wheel-center">
+                      <span id="result-world">Healthcare</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="current-value">Healthcare</div>
+                <button class="spin-btn" data-spin="world">Spin Combo</button>
+              </section>
+
+              <section class="slot" data-slot="twist">
+                <div class="slot-header">
+                  <span class="slot-label">THE TWIST</span>
+                </div>
+
+                <div class="wheel-outer">
+                  <div class="wheel" data-wheel="twist">
+                    <div class="pointer" aria-hidden="true"></div>
+                    <div class="wheel-center">
+                      <span id="result-twist">AI</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="current-value">AI</div>
+                <button class="spin-btn" data-spin="twist">Spin Combo</button>
+              </section>
+
+              <section class="slot" data-slot="people">
+                <div class="slot-header">
+                  <span class="slot-label">THE PEOPLE</span>
+                </div>
+
+                <div class="wheel-outer">
+                  <div class="wheel" data-wheel="people">
+                    <div class="pointer" aria-hidden="true"></div>
+                    <div class="wheel-center">
+                      <span id="result-people">Students</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="current-value">Students</div>
+                <button class="spin-btn" data-spin="people">Spin Combo</button>
+              </section>
+            </main>
+
+            <aside class="log-panel" aria-live="polite">
+              <div class="log-header">
+                <span>Spin Log</span>
+              </div>
+              <ul id="spinLogList" class="log-list">
+                <li class="log-entry is-empty">No spins yet. Press a Spin Combo button.</li>
+              </ul>
+            </aside>
           </div>
-
-          <button class="spin-btn" data-spin="people">Spin Combo</button>
-        </section>
-      </main>
-
-      <aside class="log-panel" aria-live="polite">
-        <div class="log-header">
-          <span>Spin Log</span>
-        </div>
-        <ul id="spinLogList" class="log-list">
-          <li class="log-entry is-empty">No spins yet. Press a Spin Combo button.</li>
-        </ul>
-      </aside>
+        </main>
+      </div>
     </div>
 
     <script src="script.js"></script>
