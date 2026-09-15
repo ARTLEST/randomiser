@@ -1,12 +1,6 @@
 {
   "version": 2,
-  "name": "geekroom-randomiser",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "name": "million-dollar-idea",
   "routes": [
     {
       "src": "/(.*)",
