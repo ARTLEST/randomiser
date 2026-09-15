@@ -130,7 +130,7 @@ function buildWheelLabels(slotKey, wheel) {
   items.forEach((item, index) => {
     const label = document.createElement('span');
     label.className = 'option-label';
-    label.style.setProperty('--label-angle', `${index * angleStep}deg`);
+    label.style.setProperty('--label-angle', `${(index + 0.5) * angleStep}deg`);
     label.textContent = item;
     wheel.appendChild(label);
   });
@@ -226,10 +226,8 @@ function initializeWheels() {
 
 initializeWheels();
 
-document.querySelectorAll('.spin-btn').forEach((button) => {
-  button.addEventListener('click', () => {
-    spinAllWheels();
-  });
+document.getElementById('centerSpinBtn').addEventListener('click', () => {
+  spinAllWheels();
 });
 
 document.getElementById('spinAllBtn').addEventListener('click', () => {
