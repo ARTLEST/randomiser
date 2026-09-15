@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "name": "million-dollar-idea",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
+    {
+      "handle": "filesystem"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
