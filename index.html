@@ -21,22 +21,12 @@
     <div class="page-shell">
       <header class="site-header">
         <div class="brand-wrap">
-          <span class="brand-mark">GR</span>
-          <span class="brand-name">GeekRoom</span>
+          <span class="brand-mark">MR</span>
+          <span class="brand-name">Million Dollar Idea</span>
         </div>
       </header>
 
       <main class="main-panel">
-        <section class="hero">
-          <div class="hero-badge">
-            <span class="brand-mark large">GR</span>
-          </div>
-          <div class="hero-copy">
-            <p class="eyebrow">GeekRoom</p>
-            <h1>Million Dollar Idea</h1>
-          </div>
-        </section>
-
         <div class="controls-row">
           <label class="team-label" for="teamNameInput">Team name</label>
           <input
@@ -46,7 +36,7 @@
             placeholder="e.g. Team Nova"
             value="Team Nova"
           />
-          <button id="spinAllBtn" class="primary-btn">Spin All</button>
+          <button id="spinAllBtn" class="primary-btn">Spin all</button>
           <button id="downloadPdfBtn" class="secondary-btn">Download PDF</button>
         </div>
 
@@ -57,16 +47,10 @@
             </div>
 
             <div class="wheel-outer">
-              <div class="wheel" data-wheel="world">
-                <div class="pointer" aria-hidden="true"></div>
-                <div class="wheel-center">
-                  <span id="result-world">Healthcare</span>
-                </div>
-              </div>
+              <div class="pointer" aria-hidden="true"></div>
+              <div class="wheel" data-wheel="world"></div>
             </div>
-
-            <div class="current-value">Healthcare</div>
-            <button class="spin-btn" data-spin="world">Spin Combo</button>
+            <div class="selected-value" id="result-world">Healthcare</div>
           </article>
 
           <article class="slot" data-slot="twist">
@@ -75,16 +59,10 @@
             </div>
 
             <div class="wheel-outer">
-              <div class="wheel" data-wheel="twist">
-                <div class="pointer" aria-hidden="true"></div>
-                <div class="wheel-center">
-                  <span id="result-twist">AI</span>
-                </div>
-              </div>
+              <div class="pointer" aria-hidden="true"></div>
+              <div class="wheel" data-wheel="twist"></div>
             </div>
-
-            <div class="current-value">AI</div>
-            <button class="spin-btn" data-spin="twist">Spin Combo</button>
+            <div class="selected-value" id="result-twist">AI</div>
           </article>
 
           <article class="slot" data-slot="people">
@@ -93,18 +71,16 @@
             </div>
 
             <div class="wheel-outer">
-              <div class="wheel" data-wheel="people">
-                <div class="pointer" aria-hidden="true"></div>
-                <div class="wheel-center">
-                  <span id="result-people">Students</span>
-                </div>
-              </div>
+              <div class="pointer" aria-hidden="true"></div>
+              <div class="wheel" data-wheel="people"></div>
             </div>
-
-            <div class="current-value">Students</div>
-            <button class="spin-btn" data-spin="people">Spin Combo</button>
+            <div class="selected-value" id="result-people">Students</div>
           </article>
         </section>
+
+        <div class="center-action">
+          <button id="centerSpinBtn" class="center-spin-btn">Spin Combo</button>
+        </div>
 
         <aside class="log-panel" aria-live="polite">
           <div class="log-header">
